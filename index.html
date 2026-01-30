@@ -268,6 +268,36 @@ footer{
   section{padding:70px 7%;}
 }
 
+  /* ================= ACHIEVEMENTS NEW ================= */
+
+.achievement-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  max-width:900px;
+  margin:auto;
+}
+
+.achievement-card{
+  background:#020617;
+  border:1px solid #1e293b;
+  padding:25px 20px;
+  text-align:center;
+  border-radius:18px;
+  transition:.3s;
+}
+
+.achievement-card h3{
+  color:#38bdf8;
+  margin:12px 0 8px;
+}
+
+.achievement-card:hover{
+  border-color:#38bdf8;
+  transform:translateY(-8px);
+}
+
+
 </style>
 </head>
 
@@ -310,10 +340,19 @@ footer{
 <h2 class="title">About Me</h2>
 
 <p>
-CSE student at Green University. Competitive programmer.
-Solved 230+ problems. Champion in Winter Contest 2025.
-Hometown: Barishal.
+I am a dedicated Computer Science and Engineering (CSE) student at Green University of Bangladesh 
+with a strong passion for competitive programming and problem solving.
+
+I have solved 230+ problems across multiple online judges including Codeforces, AtCoder, and Beecrowd, 
+which has helped me build strong logical thinking and algorithmic skills.
+
+I enjoy learning new technologies, improving my coding efficiency, and participating in programming contests.
+My goal is to become a skilled Software Engineer and contribute to real-world projects.
+
+Hometown: Barishal, Bangladesh 🇧🇩  
+Always learning. Always improving. 💪
 </p>
+
 
 </section>
 
@@ -398,6 +437,29 @@ Hometown: Barishal.
 
 </section>
 
+<!-- ACHIEVEMENTS -->
+<section id="achievements" data-aos="fade-up">
+
+<h2 class="title">Achievements & Awards</h2>
+
+<div class="achievement-grid">
+
+  <div class="achievement-card">
+    🏆
+    <h3>Champion & Best Fresher</h3>
+    <p>Winter Programming Contest 2025 (GUBCPA)</p>
+  </div>
+
+  <div class="achievement-card">
+    📈
+    <h3>230+ Problems Solved</h3>
+    <p>Across Multiple Online Judges</p>
+  </div>
+</div>
+
+</section>
+
+  
 <!-- CONTACT -->
 <section id="contact" data-aos="zoom-in">
 
