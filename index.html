@@ -135,12 +135,21 @@
   margin:auto;
 }
     .project{
-      background:#020617;
-      border:1px solid #1e293b;
-      padding:25px;
-      border-radius:15px;
-      transition:.3s;
-    }
+  background:#020617;
+  border:1px solid #1e293b;
+  padding:25px;
+  border-radius:15px;
+  transition:.3s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+}
+    .project .btn{
+  margin-top: auto;
+  align-self: flex-start;
+}
 
     .project:hover{border-color:#38bdf8;transform:translateY(-5px);}
 
