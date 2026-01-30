@@ -11,13 +11,11 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
     body{
       background:#020617;
@@ -30,56 +28,39 @@
     /* Navbar */
     nav{
       position:fixed;
-      top:0;left:0;
-      width:100%;
-      background:#020617cc;
+      top:0;width:100%;
+      background:#020617ee;
       backdrop-filter:blur(10px);
       display:flex;
       justify-content:space-between;
       align-items:center;
       padding:15px 8%;
-      z-index:1000;
       border-bottom:1px solid #1e293b;
+      z-index:1000;
     }
 
-    nav h2{color:#38bdf8;font-weight:700;}
-
+    nav h2{color:#38bdf8;}
     nav ul{display:flex;gap:25px;list-style:none;}
-
-    nav ul li a{
-      font-weight:500;
-      transition:.3s;
-    }
-
     nav ul li a:hover{color:#38bdf8;}
 
     /* Hero */
     .hero{
       min-height:100vh;
       display:flex;
-      align-items:center;
       justify-content:center;
+      align-items:center;
       text-align:center;
       padding:120px 8% 60px;
       background:linear-gradient(135deg,#020617,#0f172a);
     }
 
-    .hero h1{
-      font-size:3.2rem;
-      color:#38bdf8;
-    }
-
-    .hero p{
-      margin:15px 0 25px;
-      font-size:1.2rem;
-      color:#cbd5f5;
-    }
+    .hero h1{font-size:3rem;color:#38bdf8;}
+    .hero p{margin:15px 0 25px;color:#cbd5f5;font-size:1.2rem;}
 
     .btn{
-      display:inline-block;
-      padding:12px 28px;
       background:#38bdf8;
       color:#020617;
+      padding:12px 28px;
       border-radius:30px;
       font-weight:600;
       transition:.3s;
@@ -92,24 +73,39 @@
 
     .title{
       text-align:center;
-      font-size:2.4rem;
+      font-size:2.3rem;
       margin-bottom:50px;
       color:#38bdf8;
     }
 
     /* About */
-    .about p{
-      max-width:850px;
-      margin:auto;
-      text-align:center;
-      font-size:1.1rem;
-      line-height:1.8;
-    }
+    .about p{max-width:850px;margin:auto;text-align:center;line-height:1.8;}
 
-    /* Skills */
-    .skills-grid{
+    /* Stats */
+    .stats{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      gap:25px;
+      max-width:800px;
+      margin:auto;
+    }
+
+    .stat{
+      background:#020617;
+      padding:25px;
+      border-radius:15px;
+      border:1px solid #1e293b;
+      text-align:center;
+      transition:.3s;
+    }
+
+    .stat h3{color:#38bdf8;font-size:1.7rem;}
+    .stat:hover{border-color:#38bdf8;transform:translateY(-5px);}
+
+    /* Skills */
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
       gap:25px;
       max-width:900px;
       margin:auto;
@@ -124,93 +120,72 @@
       transition:.3s;
     }
 
-    .skill i{
-      font-size:35px;
-      color:#38bdf8;
-      margin-bottom:10px;
-    }
-
-    .skill:hover{
-      transform:translateY(-6px);
-      border-color:#38bdf8;
-    }
+    .skill i{font-size:30px;color:#38bdf8;margin-bottom:10px;}
+    .skill:hover{border-color:#38bdf8;transform:translateY(-5px);}
 
     /* Projects */
-    .projects-grid{
+    .projects{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
     }
 
     .project{
       background:#020617;
       border:1px solid #1e293b;
       padding:25px;
-      border-radius:18px;
+      border-radius:15px;
       transition:.3s;
     }
 
-    .project:hover{
-      transform:translateY(-6px);
-      border-color:#38bdf8;
-    }
+    .project:hover{border-color:#38bdf8;transform:translateY(-5px);}
 
     .project h3{color:#38bdf8;margin-bottom:10px;}
 
     /* Achievements */
-    .achievements ul{
-      max-width:750px;
-      margin:auto;
-      list-style:none;
-    }
+    .achievements ul{max-width:750px;margin:auto;list-style:none;}
 
     .achievements li{
       background:#020617;
-      padding:18px 22px;
-      margin-bottom:18px;
+      padding:18px;
+      margin-bottom:15px;
       border-left:4px solid #38bdf8;
-      border-radius:12px;
+      border-radius:10px;
     }
 
     /* Contact */
-    .contact-links{
+    .contacts{
       display:flex;
       justify-content:center;
       gap:25px;
       flex-wrap:wrap;
     }
 
-    .contact-links a{
+    .contacts a{
       padding:12px 22px;
       border:1px solid #1e293b;
       border-radius:30px;
-      transition:.3s;
       background:#020617;
+      transition:.3s;
     }
 
-    .contact-links a i{margin-right:6px;}
+    .contacts a i{margin-right:6px;}
 
-    .contact-links a:hover{
-      background:#38bdf8;
-      color:#020617;
-    }
+    .contacts a:hover{background:#38bdf8;color:#020617;}
 
     /* Footer */
     footer{
       text-align:center;
-      padding:30px;
-      background:#020617;
+      padding:25px;
       border-top:1px solid #1e293b;
       color:#94a3b8;
     }
 
-    /* Responsive */
     @media(max-width:768px){
       nav ul{display:none;}
-      .hero h1{font-size:2.3rem;}
+      .hero h1{font-size:2.2rem;}
       section{padding:70px 7%;}
     }
-
   </style>
 </head>
 <body>
@@ -221,6 +196,7 @@
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#stats">Stats</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#achievements">Achievements</a></li>
@@ -229,89 +205,90 @@
 </nav>
 
 <!-- Hero -->
-<section class="hero" id="home">
+<section class="hero" id="home" data-aos="fade-up">
   <div>
     <h1>Abdul Kayum</h1>
-    <p>Competitive Programmer | C/C++ | Web Learner</p>
-    <a href="https://github.com/kayum404" class="btn" target="_blank">View GitHub</a>
+    <p>Competitive Programmer | C & C++ | CSE Student</p>
+    <a href="https://github.com/kayum404" class="btn" target="_blank">Visit GitHub</a>
   </div>
 </section>
 
 <!-- About -->
-<section class="about" id="about">
+<section class="about" id="about" data-aos="fade-right">
   <h2 class="title">About Me</h2>
   <p>
-    I am a passionate competitive programmer skilled in C and C++. 
-    I have solved 250+ problems on multiple online judges and became 
-    Champion & Best Fresher in Winter Programming Contest 2025 (GUBCPA).
-    Currently, I am learning Web Development using HTML and CSS.
+    I'm a passionate competitive programmer skilled in C and C++. I study CSE at Green University of Bangladesh and my hometown is Barishal. I love solving problems and improving every day.
   </p>
 </section>
 
-<!-- Skills -->
-<section id="skills">
-  <h2 class="title">Skills</h2>
+<!-- Stats -->
+<section id="stats" data-aos="zoom-in">
+  <h2 class="title">Problem Solving Stats</h2>
+  <div class="stats">
+    <div class="stat"><h3>113</h3><p>Codeforces</p></div>
+    <div class="stat"><h3>70</h3><p>Beecrowd</p></div>
+    <div class="stat"><h3>50+</h3><p>Others</p></div>
+    <div class="stat"><h3>230+</h3><p>Total</p></div>
+  </div>
+</section>
 
-  <div class="skills-grid">
+<!-- Skills -->
+<section id="skills" data-aos="fade-up">
+  <h2 class="title">Skills</h2>
+  <div class="skills">
     <div class="skill"><i class="fas fa-code"></i><h4>C</h4></div>
     <div class="skill"><i class="fas fa-laptop-code"></i><h4>C++</h4></div>
-    <div class="skill"><i class="fas fa-database"></i><h4>DSA</h4></div>
-    <div class="skill"><i class="fas fa-brain"></i><h4>Algorithms</h4></div>
+    <div class="skill"><i class="fas fa-database"></i><h4>DSA (Basic)</h4></div>
     <div class="skill"><i class="fab fa-html5"></i><h4>HTML</h4></div>
     <div class="skill"><i class="fab fa-css3-alt"></i><h4>CSS</h4></div>
   </div>
 </section>
 
 <!-- Projects -->
-<section id="projects">
-  <h2 class="title">Projects</h2>
-
-  <div class="projects-grid">
+<section id="projects" data-aos="fade-left">
+  <h2 class="title">Repositories</h2>
+  <div class="projects">
 
     <div class="project">
-      <h3>C Programming Practice</h3>
-      <p>Collection of beginner to advanced C problems.</p>
-      <a href="https://github.com/kayum404/C-Programming-Practice" class="btn" target="_blank">View</a>
+      <h3>C Programming</h3>
+      <p>Beginner C programming solutions.</p>
+      <a href="https://github.com/kayum404/C-Programing" class="btn">View</a>
     </div>
 
     <div class="project">
-      <h3>Codeforces Practice</h3>
-      <p>Solutions of Codeforces contests and problems.</p>
-      <a href="https://github.com/kayum404/Codeforces-Practice" class="btn" target="_blank">View</a>
+      <h3>Codeforces</h3>
+      <p>Codeforces problem solutions.</p>
+      <a href="https://github.com/kayum404/Codeforces-Practise-Problem" class="btn">View</a>
     </div>
 
     <div class="project">
-      <h3>AtCoder Practice</h3>
-      <p>AtCoder problem solving repository.</p>
-      <a href="https://github.com/kayum404/Atcoder-Practice" class="btn" target="_blank">View</a>
+      <h3>AtCoder</h3>
+      <p>AtCoder practice repository.</p>
+      <a href="https://github.com/kayum404/Atcoder_Practise_Probelm" class="btn">View</a>
     </div>
 
     <div class="project">
-      <h3>CodeChef Practice</h3>
-      <p>CodeChef CP problem solutions.</p>
-      <a href="https://github.com/kayum404/Codechef-Practice" class="btn" target="_blank">View</a>
+      <h3>Structure Lab</h3>
+      <p>CSE-104 course practice.</p>
+      <a href="https://github.com/kayum404/Structure-Programming-Lab-104" class="btn">View</a>
     </div>
 
   </div>
 </section>
 
 <!-- Achievements -->
-<section class="achievements" id="achievements">
+<section class="achievements" id="achievements" data-aos="fade-up">
   <h2 class="title">Achievements</h2>
-
   <ul>
     <li>🏆 Champion & Best Fresher — Winter Programming Contest 2025 (GUBCPA)</li>
-    <li>✅ Solved 250+ Problems on Online Judges</li>
-    <li>🎓 CSE Batch 252</li>
-    <li>📈 Continuous Improvement on Codeforces</li>
+    <li>📈 Solved 230+ Problems</li>
   </ul>
 </section>
 
 <!-- Contact -->
-<section id="contact">
-  <h2 class="title">Contact</h2>
-
-  <div class="contact-links">
+<section id="contact" data-aos="zoom-in">
+  <h2 class="title">Connect With Me</h2>
+  <div class="contacts">
     <a href="https://codeforces.com/profile/abdulkayum" target="_blank"><i class="fas fa-chart-line"></i>Codeforces</a>
     <a href="https://linkedin.com/in/abdulkayum404" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
     <a href="mailto:kayum12123@gmail.com"><i class="fas fa-envelope"></i>Email</a>
@@ -320,9 +297,18 @@
 </section>
 
 <!-- Footer -->
-<footer>
-  <p>© 2026 Abdul Kayum | Professional Portfolio</p>
+<footer data-aos="fade-up">
+  <p>© 2026 Abdul Kayum | Portfolio Website</p>
 </footer>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration:1000,
+    once:true
+  });
+</script>
 
 </body>
 </html>
